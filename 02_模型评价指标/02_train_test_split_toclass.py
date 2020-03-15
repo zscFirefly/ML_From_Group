@@ -12,7 +12,8 @@ from sklearn.neighbors import KNeighborsClassifier
 
 # 封装
 def train_test_split(X,y,test_ratio=0.2,seed=None):
-    assert X.shape[0] == y.shape[0], "the size of X must be equal to the size of y"
+    assert X.shape[0] == y.shape[0], \
+    "the size of X must be equal to the size of y"
     assert 0.0 <= test_ratio <= 1.0, "test_train must be valid"
     
     if seed: # 是否使用随机终极，使用随机结果相同，方便debug
